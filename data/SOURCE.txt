@@ -1,0 +1,4 @@
+Calendar-year total returns (%), 2007-2025.
+Source: Yahoo Finance dividend-adjusted prices via yfinance, downloaded 2026-11-03.
+Proxies: US Equity=SPY, Intl Equity=EFA, REITs=VNQ, US Bonds=AGG, TIPS=TIP, Cash=SHV.
+ETF returns are net of fund expenses.

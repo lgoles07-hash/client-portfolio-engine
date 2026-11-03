@@ -21,7 +21,7 @@
 - Tolerance (2.5) is below capacity (5.9); score pulled toward tolerance so the client can stick with the plan.
 - Goal 'income' adjusts equity by -5%.
 - Cash set to 10% to cover near-term withdrawals.
-- WARNING: worst historical year is -13.0%, beyond the client's 10% limit, and cutting equity further does not fix it (the loss comes from bonds, as in 2022). Discuss expectations with the client or consider a larger cash or short-duration bucket.
+- WARNING: worst historical year is -13.2%, beyond the client's 10% limit, and cutting equity further does not fix it (the loss comes from bonds, as in 2022). Discuss expectations with the client or consider a larger cash or short-duration bucket.
 
 ## 3. Strategic asset allocation
 | Asset class | Target | Range | Benchmark index |
@@ -40,22 +40,22 @@
 - Fund withdrawals from overweight classes and the cash bucket before selling underweights.
 - Reassess the plan after any major life event (job change, inheritance, health, retirement date).
 
-## 5. Historical stress tests (2007-2024)
+## 5. Historical stress tests (2007-2025)
 | Scenario | Portfolio | 60/40 benchmark | Dollar impact |
 |---|---|---|---|
-| 2008 Global Financial Crisis | -11.7% | -21.7% | -$164,304 |
-| 2020 calendar year (hides the March crash) | 8.9% | 11.5% | $124,642 |
-| 2022 Rate shock (stocks and bonds down) | -13.0% | -15.2% | -$182,602 |
-| 2007-2009 Crisis cycle | 7.3% | 0.6% | $101,874 |
-| Full period | 136.6% | 193.0% | $1,912,079 |
+| 2008 Global Financial Crisis | -9.8% | -19.9% | -$137,515 |
+| 2020 calendar year (hides the March crash) | 9.0% | 11.4% | $125,762 |
+| 2022 Rate shock (stocks and bonds down) | -13.2% | -15.2% | -$185,213 |
+| 2007-2009 Crisis cycle | 7.3% | 0.2% | $102,609 |
+| Full period | 160.3% | 237.5% | $2,243,513 |
 
 | Metric (full period) | Portfolio | 60/40 benchmark |
 |---|---|---|
-| CAGR | 4.9% | 6.2% |
-| Volatility | 7.6% | 11.4% |
-| Worst year | -13.0% | -21.7% |
-| Max drawdown | -13.0% | -21.7% |
-| Sharpe ratio | 0.49 | 0.47 |
+| CAGR | 5.2% | 6.6% |
+| Volatility | 7.2% | 10.9% |
+| Worst year | -13.2% | -19.9% |
+| Max drawdown | -13.2% | -19.9% |
+| Sharpe ratio | 0.53 | 0.52 |
 
 ## 6. Important limitations
 - Backtests use **annual** returns, so intra-year drawdowns (e.g. March 2020) are understated.

@@ -38,22 +38,22 @@
 - Fund withdrawals from overweight classes and the cash bucket before selling underweights.
 - Reassess the plan after any major life event (job change, inheritance, health, retirement date).
 
-## 5. Historical stress tests (2007-2024)
+## 5. Historical stress tests (2007-2025)
 | Scenario | Portfolio | 60/40 benchmark | Dollar impact |
 |---|---|---|---|
-| 2008 Global Financial Crisis | -31.0% | -21.7% | -$13,957 |
-| 2020 calendar year (hides the March crash) | 11.6% | 11.5% | $5,207 |
-| 2022 Rate shock (stocks and bonds down) | -16.4% | -15.2% | -$7,397 |
-| 2007-2009 Crisis cycle | -9.5% | 0.6% | -$4,287 |
-| Full period | 245.8% | 193.0% | $110,610 |
+| 2008 Global Financial Crisis | -29.8% | -19.9% | -$13,407 |
+| 2020 calendar year (hides the March crash) | 11.8% | 11.4% | $5,288 |
+| 2022 Rate shock (stocks and bonds down) | -16.6% | -15.2% | -$7,465 |
+| 2007-2009 Crisis cycle | -9.6% | 0.2% | -$4,319 |
+| Full period | 301.8% | 237.5% | $135,788 |
 
 | Metric (full period) | Portfolio | 60/40 benchmark |
 |---|---|---|
-| CAGR | 7.1% | 6.2% |
-| Volatility | 14.6% | 11.4% |
-| Worst year | -31.0% | -21.7% |
-| Max drawdown | -31.0% | -21.7% |
-| Sharpe ratio | 0.47 | 0.47 |
+| CAGR | 7.6% | 6.6% |
+| Volatility | 14.0% | 10.9% |
+| Worst year | -29.8% | -19.9% |
+| Max drawdown | -29.8% | -19.9% |
+| Sharpe ratio | 0.49 | 0.52 |
 
 ## 6. Important limitations
 - Backtests use **annual** returns, so intra-year drawdowns (e.g. March 2020) are understated.
