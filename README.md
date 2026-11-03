@@ -31,7 +31,7 @@ Reports land in `output/` (one `.md` IPS and one `.png` per client).
 
 All weights, caps, and splits are named constants in `engine/allocate.py`. They are modeling choices to defend (and tweak) in an interview, not industry standards.
 
-## Known limitations (be upfront about these)
+## Known limitations 
 
 - **Annual returns only.** Intra-year drawdowns (March 2020) are understated. Next step: monthly data via `yfinance` ETF proxies (VTI, VXUS, VNQ, BND, SCHP, BIL).
 - **Bundled data is approximate**, entered from memory of published index returns. Verify against a licensed source before citing figures.
