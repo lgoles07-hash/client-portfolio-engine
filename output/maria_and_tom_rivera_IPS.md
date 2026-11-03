@@ -41,18 +41,18 @@
 ## 5. Historical stress tests (2007-2025)
 | Scenario | Portfolio | 60/40 benchmark | Dollar impact |
 |---|---|---|---|
-| 2008 Global Financial Crisis | -18.5% | -19.9% | -$156,850 |
+| 2008 Global Financial Crisis | -18.4% | -19.9% | -$156,822 |
 | 2020 calendar year (hides the March crash) | 10.2% | 11.4% | $87,121 |
 | 2022 Rate shock (stocks and bonds down) | -14.9% | -15.2% | -$126,853 |
-| 2007-2009 Crisis cycle | 0.6% | 0.2% | $4,985 |
-| Full period | 220.2% | 237.5% | $1,872,107 |
+| 2007-2009 Crisis cycle | 0.6% | 0.3% | $5,019 |
+| Full period | 220.2% | 237.5% | $1,872,056 |
 
 | Metric (full period) | Portfolio | 60/40 benchmark |
 |---|---|---|
 | CAGR | 6.3% | 6.6% |
 | Volatility | 10.1% | 10.9% |
-| Worst year | -18.5% | -19.9% |
-| Max drawdown | -18.5% | -19.9% |
+| Worst year | -18.4% | -19.9% |
+| Max drawdown | -18.4% | -19.9% |
 | Sharpe ratio | 0.52 | 0.52 |
 
 ## 6. Important limitations
