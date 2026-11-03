@@ -49,9 +49,26 @@ def test_unattainable_loss_limit_is_flagged_not_hidden():
 
 
 def test_max_drawdown_matches_hand_calc():
-    r = portfolio_returns({"US Equity": 1.0}, R)
-    m = metrics(r.loc[[2007, 2008]], R["Cash"].loc[[2007, 2008]])
-    assert abs(m["Max drawdown"] - (-0.37)) < 1e-9
+    import pandas as pd
+    r = pd.Series([0.10, -0.20, 0.05, 0.30], index=[1, 2, 3, 4])
+    m = metrics(r, pd.Series(0.0, index=r.index))
+    # wealth: 1.0 -> 1.10 -> 0.88 -> 0.924 -> 1.2012; peak 1.10, trough 0.88
+    assert abs(m["Max drawdown"] - (0.88 / 1.10 - 1)) < 1e-9
+    assert abs(m["Worst year"] - (-0.20)) < 1e-9
+    assert abs(m["CAGR"] - (1.2012 ** 0.25 - 1)) < 1e-9
+
+
+def test_price_to_annual_return_conversion():
+    import pandas as pd
+    from fetch_data import annual_returns_from_prices
+    idx = pd.to_datetime(["2006-12-29", "2007-06-30", "2007-12-31", "2008-12-31"])
+    prices = pd.DataFrame({"A": [100.0, 105.0, 110.0, 99.0],
+                           "B": [float("nan"), 50.0, 55.0, 66.0]}, index=idx)  # B is a "young" fund
+    out = annual_returns_from_prices(prices, 2007, 2008)
+    assert abs(out.loc[2007, "A"] - 10.0) < 1e-6
+    assert abs(out.loc[2008, "A"] - (-10.0)) < 1e-6
+    assert abs(out.loc[2007, "B"] - 10.0) < 1e-6    # base = first available price (50)
+    assert abs(out.loc[2008, "B"] - 20.0) < 1e-6
 
 
 def test_invalid_profile_rejected():
