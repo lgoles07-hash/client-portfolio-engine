@@ -24,14 +24,14 @@
 - WARNING: worst historical year is -13.2%, beyond the client's 10% limit, and cutting equity further does not fix it (the loss comes from bonds, as in 2022). Discuss expectations with the client or consider a larger cash or short-duration bucket.
 
 ## 3. Strategic asset allocation
-| Asset class | Target | Range | Benchmark index |
+| Asset class | Target | Range | Proxy ETF |
 |---|---|---|---|
-| US Equity | 20% | 15% - 25% | S&P 500 TR |
-| Intl Equity | 11% | 6% - 16% | MSCI EAFE (net) |
-| REITs | 4% | 1% - 7% | FTSE Nareit All Equity |
-| US Bonds | 41% | 36% - 46% | Bloomberg US Aggregate |
-| TIPS | 14% | 11% - 17% | Bloomberg US TIPS |
-| Cash | 10% | 8% - 12% | 3-month T-bill |
+| US Equity | 20% | 15% - 25% | SPY (S&P 500) |
+| Intl Equity | 11% | 6% - 16% | EFA (MSCI EAFE) |
+| REITs | 4% | 1% - 7% | VNQ (US REITs) |
+| US Bonds | 41% | 36% - 46% | AGG (US Aggregate Bond) |
+| TIPS | 14% | 11% - 17% | TIP (US TIPS) |
+| Cash | 10% | 8% - 12% | SHV (0-1yr Treasuries) |
 | **Total equity** | **35%** | | |
 
 ## 4. Rebalancing and cash-flow policy
@@ -43,11 +43,11 @@
 ## 5. Historical stress tests (2007-2025)
 | Scenario | Portfolio | 60/40 benchmark | Dollar impact |
 |---|---|---|---|
-| 2008 Global Financial Crisis | -9.8% | -19.9% | -$137,515 |
+| 2008 Global Financial Crisis | -9.8% | -19.9% | -$137,487 |
 | 2020 calendar year (hides the March crash) | 9.0% | 11.4% | $125,762 |
 | 2022 Rate shock (stocks and bonds down) | -13.2% | -15.2% | -$185,213 |
-| 2007-2009 Crisis cycle | 7.3% | 0.2% | $102,609 |
-| Full period | 160.2% | 237.5% | $2,243,305 |
+| 2007-2009 Crisis cycle | 7.3% | 0.3% | $102,642 |
+| Full period | 160.2% | 237.5% | $2,243,386 |
 
 | Metric (full period) | Portfolio | 60/40 benchmark |
 |---|---|---|
@@ -55,10 +55,10 @@
 | Volatility | 7.2% | 10.9% |
 | Worst year | -13.2% | -19.9% |
 | Max drawdown | -13.2% | -19.9% |
-| Sharpe ratio | 0.53 | 0.51 |
+| Sharpe ratio | 0.53 | 0.52 |
 
 ## 6. Important limitations
 - Backtests use **annual** returns, so intra-year drawdowns (e.g. March 2020) are understated.
 - Past performance does not predict future results; the model assumes annual rebalancing and no fees, taxes, or trading costs.
-- Historical data in this repo is approximate; verify against a licensed data source before relying on it.
+- Returns are calendar-year total returns of ETF proxies (net of fund expenses), so they differ slightly from the underlying indexes.
 - Questionnaire-based scoring is a starting point for an advisor conversation, not a substitute for it.
