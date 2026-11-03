@@ -11,9 +11,9 @@ from .backtest import (BENCH_60_40, growth_of, metrics, portfolio_returns,
                        stress_table)
 from .profile import ClientProfile
 
-BENCHMARKS = {"US Equity": "S&P 500 TR", "Intl Equity": "MSCI EAFE (net)",
-              "REITs": "FTSE Nareit All Equity", "US Bonds": "Bloomberg US Aggregate",
-              "TIPS": "Bloomberg US TIPS", "Cash": "3-month T-bill"}
+BENCHMARKS = {"US Equity": "SPY (S&P 500)", "Intl Equity": "EFA (MSCI EAFE)",
+              "REITs": "VNQ (US REITs)", "US Bonds": "AGG (US Aggregate Bond)",
+              "TIPS": "TIP (US TIPS)", "Cash": "SHV (0-1yr Treasuries)"}
 RANGE_PTS = {"US Equity": 0.05, "Intl Equity": 0.05, "REITs": 0.03,
              "US Bonds": 0.05, "TIPS": 0.03, "Cash": 0.02}
 COLORS = ["#1f4e79", "#2e75b6", "#9dc3e6", "#548235", "#a9d18e", "#bfbfbf"]
@@ -84,7 +84,7 @@ def build_ips(p: ClientProfile, alloc: Allocation, returns, chart_name: str) -> 
     add("")
 
     add("## 3. Strategic asset allocation")
-    add("| Asset class | Target | Range | Benchmark index |\n|---|---|---|---|")
+    add("| Asset class | Target | Range | Proxy ETF |\n|---|---|---|---|")
     for k, v in w.items():
         lo, hi = max(0, v - RANGE_PTS[k]), min(1, v + RANGE_PTS[k])
         add(f"| {k} | {v:.0%} | {lo:.0%} - {hi:.0%} | {BENCHMARKS[k]} |")
@@ -109,7 +109,7 @@ def build_ips(p: ClientProfile, alloc: Allocation, returns, chart_name: str) -> 
     add("## 6. Important limitations")
     add("- Backtests use **annual** returns, so intra-year drawdowns (e.g. March 2020) are understated.")
     add("- Past performance does not predict future results; the model assumes annual rebalancing and no fees, taxes, or trading costs.")
-    add("- Historical data in this repo is approximate; verify against a licensed data source before relying on it.")
+    add("- Returns are calendar-year total returns of ETF proxies (net of fund expenses), so they differ slightly from the underlying indexes.")
     add("- Questionnaire-based scoring is a starting point for an advisor conversation, not a substitute for it.\n")
     return "\n".join(L)
 
