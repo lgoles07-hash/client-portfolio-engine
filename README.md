@@ -1,7 +1,5 @@
 # Client-Profile-to-Portfolio Engine
 
-![Sample output](output/maria_and_tom_rivera_summary.png)
-
 Takes a client's profile (age, goal, horizon, risk tolerance, liquidity needs, loss limit) and produces:
 
 1. a **risk-scored target asset allocation**,
@@ -12,6 +10,7 @@ Takes a client's profile (age, goal, horizon, risk tolerance, liquidity needs, l
 
 ```bash
 pip install -r requirements.txt
+python fetch_data.py                   # pull real ETF data and rebuild data/annual_returns.csv
 python run.py                          # all clients in clients/
 python run.py clients/alex_chen.json   # one client
 python run.py --data my_returns.csv    # your own returns (percent, same columns as data/annual_returns.csv)
@@ -33,10 +32,10 @@ Reports land in `output/` (one `.md` IPS and one `.png` per client).
 
 All weights, caps, and splits are named constants in `engine/allocate.py`. They are modeling choices to defend (and tweak) in an interview, not industry standards.
 
-## Known limitations 
+## Known limitations (be upfront about these)
 
-- **Annual returns only.** Intra-year drawdowns (March 2020) are understated. Next step: monthly data via `yfinance` ETF proxies (VTI, VXUS, VNQ, BND, SCHP, BIL).
-- **Bundled data is approximate**, entered from memory of published index returns. Verify against a licensed source before citing figures.
+- **Annual returns only.** Intra-year drawdowns (March 2020) are understated. Next step: monthly returns from the same ETF proxies.
+- **ETF proxies, not indexes.** Returns come from SPY, EFA, VNQ, AGG, TIP and SHV (Yahoo Finance via `fetch_data.py`; see `data/SOURCE.txt`). They are net of fund expenses, so they run slightly below the underlying indexes.
 - No fees, taxes, or trading costs; annual rebalancing assumed.
 - The scoring weights are heuristic, not calibrated or validated.
 
