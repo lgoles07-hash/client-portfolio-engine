@@ -1,4 +1,4 @@
-yaml
+
 name: Refresh data
 on: workflow_dispatch
 permissions:
