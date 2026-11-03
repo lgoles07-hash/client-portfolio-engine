@@ -1,5 +1,7 @@
 # Client-Profile-to-Portfolio Engine
 
+![Sample output](output/maria_and_tom_rivera_summary.png)
+
 Takes a client's profile (age, goal, horizon, risk tolerance, liquidity needs, loss limit) and produces:
 
 1. a **risk-scored target asset allocation**,
